@@ -1,12 +1,83 @@
 * {
   box-sizing: border-box;
 }
+:root {
+  --dark: rgb(0, 162, 255);
+  --light: lightblue;
+}
 .container {
   background-color: azure;
   height: 100vh;
   width: 100vw;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   position: relative;
+  z-index: -2;
+}
+.progress-box {
+  position: relative;
+  /* background-color: bisque; */
+  width: 80vw;
+  height: 30vh;
+  display: flex;
+  font-size: xx-large;
+  /* color: white; */
+  justify-content: space-between;
+  align-items: center;
+}
+.num {
+  /* background-color: rgb(94, 194, 228); */
+  background-color: var(--dark);
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  border: 2px solid white;
+}
+.num.active {
+  /* background-color: rgb(94, 194, 228); */
+  background-color: var(--dark);
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  border: 3px solid rgb(3, 40, 248);
+}
+.progress {
+  position: absolute;
+  z-index: -3;
+  background-color: lightblue;
+  height: 10px;
+  width: 100%;
+}
+.buttons {
+  /* background-color: aquamarine; */
+  width: 80vw;
+  height: 20vh;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.btn {
+  z-index: 5;
+  cursor: pointer;
+  font-size: 1.5rem;
+  padding: 5px 20px;
+  border-radius: 5px;
+}
+.btn.active {
+  background-image: linear-gradient(rgb(88, 236, 247), rgb(0, 38, 255));
+  border: none;
+  color: white;
+  cursor: pointer;
+  box-shadow: 2px 2px 2px chocolate;
 }
